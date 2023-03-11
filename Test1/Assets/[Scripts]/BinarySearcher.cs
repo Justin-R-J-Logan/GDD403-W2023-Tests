@@ -148,6 +148,8 @@ public class BinarySearcher : MonoBehaviour
                 _index = mid;
                 working = false;
                 Debug.Log("Found at position " + _index + " With:" + card + ":" + SortingSearchingSceneController.Instance.selected.GetComponent<Card>().GetAbsValue());
+                steps.Enqueue(new Vector2(-1, _index - 1));
+                steps.Enqueue(new Vector2(_index+1, this.max));
             }
             else if (card < cardsToSearch[mid].GetComponent<Card>().GetAbsValue())
             {
@@ -167,18 +169,27 @@ public class BinarySearcher : MonoBehaviour
     public void DoSteps()
     {
         Vector2 step = steps.Dequeue();
-        Debug.Log("Bloop " + step.x + ":" + step.y);
 
         int start = (int)step.x, end = (int)step.y;
 
-        for (int i = start; i > end; i++)
+        for (int i = start; i <= end; i++)
         {
-            SortingSearchingSceneController.Instance.cardObjectReferences[i].gameObject.SetActive(false);
-            Debug.Log("bloop");
+            if (i >= 0 && i < SortingSearchingSceneController.Instance.cardObjectReferences.Count)
+            {
+                SortingSearchingSceneController.Instance.cardObjectReferences[i].gameObject.SetActive(false);
+                Debug.Log(start + ":" + i + ":" + end);
+            }
         }
         if (steps.Count > 0)
         {
-            Invoke("DoSteps", 1.0f);
+            if (step.x == -1)
+            {
+                Invoke("DoSteps", 0.001f);
+            }
+            else
+            {
+                Invoke("DoSteps", 1.0f);
+            }
         }
     }
 }
