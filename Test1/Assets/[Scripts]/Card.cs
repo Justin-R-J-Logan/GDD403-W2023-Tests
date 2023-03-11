@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Card : MonoBehaviour, IComparable<Card>
 {
+
+    const int MAX_VAL = 13;
+
     [Header("Card Properties")]
     public string rankName;
     public string suit;
@@ -99,10 +102,19 @@ public class Card : MonoBehaviour, IComparable<Card>
 
     void OnMouseOver()
     {
-        if (Input.GetMouseButtonDown(0) && !isSelected && !GameController.Instance.beingDelayed)
+        if(GameController.Instance != null)
         {
-            Flip();
-            GameController.Instance.SelectCard(this.gameObject);
+            if (Input.GetMouseButtonDown(0) && !isSelected && !GameController.Instance.beingDelayed)
+            {
+                Flip();
+                GameController.Instance.SelectCard(this.gameObject);
+            }
+        } else
+        {
+            if (Input.GetMouseButtonDown(0) && SortingSearchingSceneController.Instance.CanSelect && !isSelected)
+            {
+                SortingSearchingSceneController.Instance.SelectCard(this.gameObject);
+            }
         }
     }
 
@@ -176,9 +188,10 @@ public class Card : MonoBehaviour, IComparable<Card>
         return suitval;
     }
 
-    private int GetAbsValue()
+    //Get value for sorting from Suit and Value
+    public int GetAbsValue()
     {
-        return suitval + (value * 13);
+        return suitval + (value * MAX_VAL);
     }
 
     public int CompareTo(Card other)

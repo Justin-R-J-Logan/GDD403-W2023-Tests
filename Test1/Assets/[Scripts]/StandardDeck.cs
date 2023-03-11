@@ -121,7 +121,7 @@ public class StandardDeck : Stack<GameObject>
         //Get the card we want
         GameObject card = listOfCards[index];
         //Remove that card
-        listOfCards.RemoveAt(0);
+        listOfCards.RemoveAt(index);
         //Clear stack
         this.Clear();
         //Add all back to stack
@@ -129,6 +129,24 @@ public class StandardDeck : Stack<GameObject>
         {
             this.Push(c);
         }
+        //Return selected card;
+        return card;
+    }
+
+
+    //Copy Random card
+    public GameObject CopyRandomCard()
+    {
+        int index = Random.Range(0, this.Count);
+        return CopySpecific(index);
+    }
+
+    public GameObject CopySpecific(int index)
+    {
+        //Make list of cards
+        List<GameObject> listOfCards = this.ToList();
+        //Get the card we want
+        GameObject card = GameObject.Instantiate(listOfCards[index]);
         //Return selected card;
         return card;
     }

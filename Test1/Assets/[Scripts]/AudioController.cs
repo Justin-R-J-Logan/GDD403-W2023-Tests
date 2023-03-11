@@ -8,7 +8,7 @@ public class AudioController : MonoBehaviour
 {
     //Singleton instance of this controller. Multiples will glitch the system.
     public static AudioController Instance;
-
+    
     //Audio Clips and Source
     public AudioClip[] clips;
     private AudioSource source;
