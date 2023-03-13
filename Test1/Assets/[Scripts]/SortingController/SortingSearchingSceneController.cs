@@ -3,31 +3,52 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
 
+//File:        SortingSearchingSceneController.cs
+//Project:     Midterm Test (Test 1)
+//College:     Canadore College
+//Course #:    GDD-403
+//Prof:        Tom Tsiliopoulos
+//Date:        2023-03-12
+//Author:      Justin Logan
+//Student #:   A00066979
+//Sorting and Searching Game Controller
+
 public class SortingSearchingSceneController : MonoBehaviour
 {
 
-    //Singleton instance of this controller. Multiples will glitch the system.
+    //Singleton instance of this controller. Multiples will glitch the system
+    //only one should ever be used
     public static SortingSearchingSceneController Instance { get; private set; }
 
+    //Selected or Random card position (to place card), for searching
     public Transform selectedPosition;
 
-    public List<Transform> fourByFourLayout;
+    //Layout and object references
+    public List<Transform> gameLayout;
     public List<GameObject> cardObjectReferences;
 
+    //Selected card
     public GameObject selected;
 
+    //Standard deck, copied from GameController
     public StandardDeck deck;
 
+    //Search speed and default
     public float SortingSpeed = 0.5f;
 
+    //Can we select a card, or is a swap or search happening
+    public bool CanSelect = true;
+
+    //Queue up all the swaps required, then after we are done we do all of them
+    Queue<Vector2> swaps = new Queue<Vector2>();
     // Start is called before the first frame update
     void Start()
     {
-        Instance = this;
-        deck = new StandardDeck(); // example of composition
-        cardObjectReferences = new List<GameObject>();
+        Instance = this;            //Create the singleton
+        deck = new StandardDeck(); 
+        cardObjectReferences = new List<GameObject>(); //Create empty list
     }
-
+    //Selects a card, and destroyes previously selected card.
     public void SelectCard(GameObject cardObject)
     {
         if (selected != null)
@@ -38,15 +59,12 @@ public class SortingSearchingSceneController : MonoBehaviour
         selected.transform.position = selectedPosition.position;
         selected.GetComponent<Card>().isSelected = true;
     }
-
-    public bool CanSelect = true;
-    Queue<Vector2> swaps = new Queue<Vector2>();
     
+
+    //Bubble sort algorithm for the cards
     public void BubbleSortQueue()
     {
         CanSelect = false;
-        //swaps.Enqueue(new Vector2(j, j+1));
-        //cardObjectReferences[j].GetComponent<Card>().GetAbsValue()
 
         List<int> lst = new List<int>();
 
@@ -83,6 +101,7 @@ public class SortingSearchingSceneController : MonoBehaviour
     }
 
     //Internal, recursive call for Perform Enqueue
+    //Performs all the on-screen swaps in order with a sorting speed.
     public void PerformQueue()
     {
         if (swaps.Count < 1)
@@ -95,11 +114,11 @@ public class SortingSearchingSceneController : MonoBehaviour
         Invoke("PerformQueue", SortingSpeed);
     }
 
-
+    //Swaps two card positions and lets them drop to the table again
     public void SwapPositions(int one, int two)
     {
-        Vector3 position1 = new Vector3(fourByFourLayout[one].transform.position.x, fourByFourLayout[one].transform.position.y, fourByFourLayout[one].transform.position.z);
-        Vector3 position2 = new Vector3(fourByFourLayout[two].transform.position.x, fourByFourLayout[two].transform.position.y, fourByFourLayout[two].transform.position.z);
+        Vector3 position1 = new Vector3(gameLayout[one].transform.position.x, gameLayout[one].transform.position.y, gameLayout[one].transform.position.z);
+        Vector3 position2 = new Vector3(gameLayout[two].transform.position.x, gameLayout[two].transform.position.y, gameLayout[two].transform.position.z);
 
         cardObjectReferences[one].transform.position = position2;
         cardObjectReferences[two].transform.position = position1;
@@ -109,7 +128,8 @@ public class SortingSearchingSceneController : MonoBehaviour
         cardObjectReferences[one] = GOTWO;
     }
 
-
+    //Binary search caller
+    //Unused, see BinarySearch class.
     public void BinarySearch()
     {
         if (selected == null)
@@ -121,7 +141,7 @@ public class SortingSearchingSceneController : MonoBehaviour
             PerformBinarySearchRecursive(cardObjectReferences, selected, 0, cardObjectReferences.Count-1);
         }
     }
-
+    //Unused, see BinarySearch class.
     public int PerformBinarySearchRecursive(List<GameObject> cards, GameObject card, int low, int high)
     {
         return 0;

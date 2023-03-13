@@ -2,101 +2,37 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//File:        BinarySearcher.cs
+//Project:     Midterm Test (Test 1)
+//College:     Canadore College
+//Course #:    GDD-403
+//Prof:        Tom Tsiliopoulos
+//Date:        2023-03-12
+//Author:      Justin Logan
+//Student #:   A00066979
+//Doing binary search stuff in here.
+
 public class BinarySearcher : MonoBehaviour
 {
+    //Self instance
     public static BinarySearcher Instance;
 
+    //Searching cards
     public List<GameObject> cardsToSearch;
 
+    //Are we doing binary search?
     bool working = false;
 
+    //Our index
     private int _index = -2;
 
+    //Key, min, max for binary search
     private int key, min, max;
 
+    //Queue for steps, used later
     private Queue<Vector2> steps;
 
-    /*
-    public int GetIndex()
-    {
-        if (working)
-        {
-            return -666;
-        }
-        else
-        {
-            return _index;
-        }
-        
-    }
-
-
-
-    public void DoBinarySearch(Card c, GameObject[] cs)
-    {
-        if (working) return;
-        this.key = c.GetAbsValue();
-        this.cardsToSearch = new List<GameObject>(cs);
-        min = 0;
-        max = cardsToSearch.Count;
-        _index = -1;
-        working = true;
-
-        foreach(GameObject g in cardsToSearch)
-        {
-            g.SetActive(true);
-        }
-
-        Invoke("BinarySearchRecursive", 1.0f);
-    }
-    public void BinarySearchRecursive()
-    {
-        int mid = (min + max) / 2;
-        if (min > max)
-        {
-            _index = -1;
-            working = false;
-
-        }
-        else
-        {
-            if (key == cardsToSearch[mid].GetComponent<Card>().GetAbsValue())
-            {
-                _index = mid;
-                working = false;
-                for (int i = 0; i < cardsToSearch.Count; i++)
-                {
-                    if (i == _index)
-                    {
-                        cardsToSearch[i].SetActive(true);
-                    }
-                    else
-                    {
-                        cardsToSearch[i].SetActive(false);
-                    }
-                }
-            }
-            else if (key < cardsToSearch[mid].GetComponent<Card>().GetAbsValue())
-            {
-                for (int i = mid; i < max; i++)
-                {
-                    cardsToSearch[i].SetActive(false);
-                }
-                max = mid - 1;
-                Invoke("BinarySearchRecursive", 1.0f);
-            }
-            else
-            {
-                for (int i = mid; i > min; i--)
-                {
-                    cardsToSearch[i].SetActive(false);
-                }
-                min = mid + 1;
-                Invoke("BinarySearchRecursive", 1.0f);
-            }
-        }
-    }*/
-
+    //Get the index back if needed later.
     public int Index
     {
         get
@@ -111,6 +47,7 @@ public class BinarySearcher : MonoBehaviour
         cardsToSearch = new List<GameObject>();
         steps = new Queue<Vector2>();
     }
+    //Setup for the binary search
     public void DoBinarySearch(Card c, GameObject[] cs)
     {
         if (working) return;
@@ -130,7 +67,7 @@ public class BinarySearcher : MonoBehaviour
         Invoke("DoSteps", 1.0f);
     }
 
-
+    //Do the actual search itself.
     public void BinarySearchRecursive(int card, int min, int max)
     {
 
@@ -165,7 +102,7 @@ public class BinarySearcher : MonoBehaviour
             }
         }
     }
-
+    //Repeat the steps to show we searched.
     public void DoSteps()
     {
         Vector2 step = steps.Dequeue();

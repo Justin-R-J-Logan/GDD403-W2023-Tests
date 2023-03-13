@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 11870685}
   m_Layer: 0
-  m_Name: 03
+  m_Name: 0,3
   m_TagString: Card Spawn Point
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 11714045}
   m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.52, y: 7.5, z: -1.5}
+  m_LocalPosition: {x: -1.5, y: 7.5, z: -1.5}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -195,7 +195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30676991}
   m_Layer: 0
-  m_Name: 10
+  m_Name: 2,2
   m_TagString: Card Spawn Point
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -224,7 +224,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 57044695}
   m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.52, y: 7.5, z: -0.5}
+  m_LocalPosition: {x: -1.5, y: 7.5, z: -0.5}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -241,7 +241,7 @@ GameObject:
   m_Component:
   - component: {fileID: 56750839}
   m_Layer: 0
-  m_Name: 07
+  m_Name: 1,3
   m_TagString: Card Spawn Point
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -257,7 +257,7 @@ GameObject:
   m_Component:
   - component: {fileID: 60772238}
   m_Layer: 0
-  m_Name: 05
+  m_Name: 1,1
   m_TagString: Card Spawn Point
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -319,7 +319,7 @@ GameObject:
   m_Component:
   - component: {fileID: 131914642}
   m_Layer: 0
-  m_Name: 08
+  m_Name: 2,0
   m_TagString: Card Spawn Point
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -500,7 +500,7 @@ GameObject:
   m_Component:
   - component: {fileID: 193056638}
   m_Layer: 0
-  m_Name: 13
+  m_Name: 3,1
   m_TagString: Card Spawn Point
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -670,7 +670,7 @@ GameObject:
   m_Component:
   - component: {fileID: 292202227}
   m_Layer: 0
-  m_Name: 02
+  m_Name: 0,2
   m_TagString: Card Spawn Point
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -818,7 +818,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386910735}
   m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.52, y: 7.5, z: 1.5}
+  m_LocalPosition: {x: -1.5, y: 7.5, z: 1.5}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -835,7 +835,7 @@ GameObject:
   m_Component:
   - component: {fileID: 386422319}
   m_Layer: 0
-  m_Name: 15
+  m_Name: 3,3
   m_TagString: Card Spawn Point
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1161,7 +1161,7 @@ GameObject:
   m_Component:
   - component: {fileID: 626916302}
   m_Layer: 0
-  m_Name: 09
+  m_Name: 2,1
   m_TagString: Card Spawn Point
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1284,7 +1284,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851856018}
   m_LocalRotation: {x: 0.000000021855694, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.52, y: 7.5, z: 0.5}
+  m_LocalPosition: {x: -1.5, y: 7.5, z: 0.5}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1301,7 +1301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 851564210}
   m_Layer: 0
-  m_Name: 11
+  m_Name: 2,3
   m_TagString: Card Spawn Point
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -1615,7 +1615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedPosition: {fileID: 94223856}
-  fourByFourLayout:
+  gameLayout:
   - {fileID: 1648689768}
   - {fileID: 1260784768}
   - {fileID: 292202227}
@@ -1634,7 +1634,7 @@ MonoBehaviour:
   - {fileID: 386422319}
   cardObjectReferences: []
   selected: {fileID: 0}
-  SortingSpeed: 0.01
+  SortingSpeed: 0.2
   CanSelect: 1
 --- !u!114 &1193699990
 MonoBehaviour:
@@ -1926,7 +1926,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1260784768}
   m_Layer: 0
-  m_Name: 01
+  m_Name: 0,1
   m_TagString: Card Spawn Point
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2091,7 +2091,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1343186793}
   m_Layer: 0
-  m_Name: 14
+  m_Name: 3,2
   m_TagString: Card Spawn Point
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2407,7 +2407,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1548995507}
   m_Layer: 0
-  m_Name: 12
+  m_Name: 3,0
   m_TagString: Card Spawn Point
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2438,7 +2438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1564606935}
   m_Layer: 0
-  m_Name: 06
+  m_Name: 1,2
   m_TagString: Card Spawn Point
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2638,7 +2638,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1648689768}
   m_Layer: 0
-  m_Name: 00
+  m_Name: 0,0
   m_TagString: Card Spawn Point
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -2701,7 +2701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1806110549}
   m_Layer: 0
-  m_Name: 04
+  m_Name: 1,0
   m_TagString: Card Spawn Point
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
