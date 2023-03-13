@@ -93,8 +93,10 @@ public class SortingSearchingUIController : MonoBehaviour
                 g.Add(child.gameObject);
             }
             GameObject c = GameObject.Instantiate(g[Random.Range(0, g.Count-1)]);
+            c.GetComponent<Card>().Initialize();
             SortingSearchingSceneController.Instance.SelectCard(c);
             SortingSearchingSceneController.Instance.selected.SetActive(true);
+            
         }
 
         resetSearchButton.GetComponent<UnityEngine.UI.Button>().interactable = true;

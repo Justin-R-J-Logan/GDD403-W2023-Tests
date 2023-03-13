@@ -48,7 +48,7 @@ public class Card : MonoBehaviour, IComparable<Card>
         return $"{rankName} of {suit}s";
     }
 
-    private void Initialize()
+    public void Initialize()
     {
         //Remove "(Clone)". 
         //For some reason when spawned in they have clone and this breaks the split
