@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="15" height="11" tilewidth="128" tileheight="128">
+ <tileset firstgid="1" name="DesertGround" tilewidth="128" tileheight="128">
+  <image source="DesertGround.png" width="768" height="768"/>
+ </tileset>
+ <tileset firstgid="37" name="DesertObject" tilewidth="128" tileheight="128">
+  <image source="DesertObject.png" width="768" height="1152"/>
+ </tileset>
+ <layer name="ground" width="15" height="11">
+  <data encoding="base64" compression="zlib">
+   eJx1kEsOwyAMREmLWgJV07BoIk7L0TNIM5JlkcWTsfFn7BpCaCCRH3iCAhawkxE7GZdtEzL/P6ZvNr0etPqTPcDKvsjv0rOyV3I1EbyML9127ohVs9uY8QWbyVMu8nqd6JKN3Gthz+bqvdUbGvvGvd4uT++/8/WvW+om/ta+j4jcsfDWdVLja2WhsWvmMdGUnC/szHIz587Ppm7MvgD3AQzF
+  </data>
+ </layer>
+ <layer name="object1" width="15" height="11">
+  <data encoding="base64" compression="zlib">
+   eJyljssOQDAURO/vsGFDQrDxJt7Pz/HpZqFJI65WnOQkHZ1ptETUEI8HfWi8dFRYP7YcI5yk7HzcR0RHCEU2YaDYZOinMIGxtH3DlM41NhUsNbcCF9rM3dP3DvZwuPL80NmZ9xa4wk3z3wqYa3Y53Fs+AXF/DbU=
+  </data>
+ </layer>
+ <layer name="object2" width="15" height="11">
+  <data encoding="base64" compression="zlib">
+   eJxjYIAAZyB2AWJXIHZjwA78gTgAiAPRxD2B2AuIvYHYB4feUCAOA+JwHPL0AqpArEamXm0g1iFTryEQG5Gp1xyILcjUCwPWRKrzI8NsTTQ+rvSDDeij8UHpBwAMQAcW
+  </data>
+ </layer>
+ <layer name="object3" width="15" height="11">
+  <data encoding="base64" compression="zlib">
+   eJyLYkAFUUCsC8R6DOQBYyA2wSLuBMQaQKyFR68lEFuhiQUBsTqZbgkhUx86CAZiAwrNIDc8QQBbeCKDSDS+L5RWZcAMT3zAFojtoGxtEvSBgDMQuwCxKxAbkqjXE4i9gNgbiM2BGADK1wft
+  </data>
+ </layer>
+</map>

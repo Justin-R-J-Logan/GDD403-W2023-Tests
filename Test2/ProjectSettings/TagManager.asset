@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - Turret
+  - Bullet
+  - Graph
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Black Tank
+  - Foreground
+  - Bullet
+  - Red Tank
+  - Graph
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 984013815
+    locked: 0
+  - name: Foreground
+    uniqueID: 938667861
+    locked: 0
+  - name: Tanks
+    uniqueID: 1691002627
+    locked: 0
+  - name: UI
+    uniqueID: 3968859829
+    locked: 0
